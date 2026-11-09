@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traderwithmeglobal - Trade Global Markets With Confidence</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0b0f19',
+                            card: '#111827',
+                            accent: '#3b82f6',
+                            hover: '#2563eb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-black tracking-wider text-blue-500 uppercase">Trader<span class="text-white">withmeglobal</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#products" class="hover:text-blue-400 transition">Products</a>
+                <a href="#features" class="hover:text-blue-400 transition">Trading Tools</a>
+                <a href="#plans" class="hover:text-blue-400 transition">Investment Plans</a>
+                <a href="#about" class="hover:text-blue-400 transition">About Us</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#login" class="text-sm font-medium text-slate-300 hover:text-white transition">Login</a>
+                <a href="#signup" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-blue-600/20 transition">Create Account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 lg:py-32 border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="inline-flex items-center space-x-2 bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-500/20">
+                        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                        <span>LIVE 11:43:42 PM</span>
+                    </span>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Trade Global Markets <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">With Confidence</span>
+                    </h1>
+                    <p class="text-lg text-slate-400">
+                        Access advanced trading tools for Forex, Cryptocurrencies, Commodities, Indices, and more with competitive spreads and lightning-fast execution.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="#signup" class="bg-blue-600 hover:bg-blue-500 text-white text-center font-semibold px-8 py-3.5 rounded-xl shadow-xl shadow-blue-600/30 transition">Create Account</a>
+                        <a href="#login" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 text-center font-semibold px-8 py-3.5 rounded-xl transition">Login</a>
+                    </div>
+                </div>
+                <!-- Live Ticker Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-xs uppercase tracking-wider text-slate-400">Real-time data • Updated</span>
+                        <span class="text-xs bg-emerald-500/10 text-emerald-400 font-semibold px-2.5 py-1 rounded">1D</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">BTC/USD</h3>
+                            <p class="text-xs text-slate-400 mt-1">Bitcoin / US Dollar</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-2xl font-bold text-white">$0.00</span>
+                            <p class="text-xs text-emerald-400 font-medium mt-1">0.00%</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-800 flex justify-between text-xs text-slate-400">
+                        <span>Status: <strong class="text-emerald-400">Open</strong></span>
+                        <span>Execution: &lt; 10ms</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Trade With Us -->
+    <section class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white">Why Trade With Us</h2>
+                <p class="text-slate-400 mt-2">Everything you need for successful trading</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 font-bold mb-4">01</div>
+                    <h3 class="text-lg font-semibold text-white">Trading Tools</h3>
+                    <p class="text-sm text-slate-400 mt-2">Plan your trades effectively with our wide range of free professional trading tools.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 font-bold mb-4">02</div>
+                    <h3 class="text-lg font-semibold text-white">Trading Products</h3>
+                    <p class="text-sm text-slate-400 mt-2">Diverse opportunities to optimize your trading portfolio across multiple markets.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 font-bold mb-4">03</div>
+                    <h3 class="text-lg font-semibold text-white">Trading Platforms</h3>
+                    <p class="text-sm text-slate-400 mt-2">Powerful platforms to suit all trading styles and needs on any device.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 font-bold mb-4">04</div>
+                    <h3 class="text-lg font-semibold text-white">Funding Methods</h3>
+                    <p class="text-sm text-slate-400 mt-2">Multiple quick, easy and secure methods to fund your trading account.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diverse Trading Products -->
+    <section id="products" class="py-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white">Diverse Trading Products</h2>
+                <p class="text-slate-400 mt-2">Access global markets with competitive conditions</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Forex</h3>
+                        <p class="text-sm text-slate-400 mt-2">Trade 70+ major, minor & exotic currency pairs with competitive spreads and conditions.</p>
+                    </div>
+                    <a href="#" class="text-blue-400 text-sm font-semibold mt-6 hover:underline inline-flex items-center">Explore Forex &rarr;</a>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Shares</h3>
+                        <p class="text-sm text-slate-400 mt-2">Access hundreds of public companies from the US, UK, Germany and more markets.</p>
+                    </div>
+                    <a href="#" class="text-blue-400 text-sm font-semibold mt-6 hover:underline inline-flex items-center">Explore Shares &rarr;</a>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Energies</h3>
+                        <p class="text-sm text-slate-400 mt-2">Discover opportunities on UK & US Crude Oil as well as Natural Gas with tight spreads.</p>
+                    </div>
+                    <a href="#" class="text-blue-400 text-sm font-semibold mt-6 hover:underline inline-flex items-center">Explore Energies &rarr;</a>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Indices</h3>
+                        <p class="text-sm text-slate-400 mt-2">Trade major and minor Index CFDs from around the globe with competitive conditions.</p>
+                    </div>
+                    <a href="#" class="text-blue-400 text-sm font-semibold mt-6 hover:underline inline-flex items-center">Explore Indices &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Plans Table -->
+    <section id="plans" class="py-20 bg-slate-900/50 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white">Investment Opportunities</h2>
+                <p class="text-slate-400 mt-2">Choose the perfect plan that suits your investment strategy and financial goals</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="border-b border-slate-800 bg-slate-950/50 text-slate-400 text-xs uppercase tracking-wider">
+                            <th class="p-4 font-semibold">Plan Name</th>
+                            <th class="p-4 font-semibold">Return Rate</th>
+                            <th class="p-4 font-semibold">Min Investment</th>
+                            <th class="p-4 font-semibold">Max Investment</th>
+                            <th class="p-4 font-semibold">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 text-sm">
+                        <tr>
+                            <td class="p-4 font-medium text-white">Beginner Plan <span class="text-xs text-slate-400 block font-normal">Standard</span></td>
+                            <td class="p-4 text-emerald-400 font-bold">15% / Trade</td>
+                            <td class="p-4 text-slate-300">$100</td>
+                            <td class="p-4 text-slate-300">$9,999</td>
+                            <td class="p-4"><button class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Select Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-white">Advanced Plan <span class="text-xs text-slate-400 block font-normal">Premium</span></td>
+                            <td class="p-4 text-emerald-400 font-bold">25% / Trade</td>
+                            <td class="p-4 text-slate-300">$10,000</td>
+                            <td class="p-4 text-slate-300">$29,999</td>
+                            <td class="p-4"><button class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Select Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-white">Premium Plan <span class="text-xs text-slate-400 block font-normal">Premium</span></td>
+                            <td class="p-4 text-emerald-400 font-bold">35% / Trade</td>
+                            <td class="p-4 text-slate-300">$30,000</td>
+                            <td class="p-4 text-slate-300">$59,999</td>
+                            <td class="p-4"><button class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Select Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-white">Standard Plan <span class="text-xs text-slate-400 block font-normal">Premium</span></td>
+                            <td class="p-4 text-emerald-400 font-bold">40% / Trade</td>
+                            <td class="p-4 text-slate-300">$100</td>
+                            <td class="p-4 text-slate-300">$500,000</td>
+                            <td class="p-4"><button class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Select Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-white">Business Plan <span class="text-xs text-slate-400 block font-normal">Premium</span></td>
+                            <td class="p-4 text-emerald-400 font-bold">85% / Trade</td>
+                            <td class="p-4 text-slate-300">$100</td>
+                            <td class="p-4 text-slate-300">$1,000,000</td>
+                            <td class="p-4"><button class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Select Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-white">Diamond Plan <span class="text-xs text-slate-400 block font-normal">Premium</span></td>
+                            <td class="p-4 text-emerald-400 font-bold">120% / Trade</td>
+                            <td class="p-4 text-slate-300">$100</td>
+                            <td class="p-4 text-slate-300">$999,999</td>
+                            <td class="p-4"><button class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Select Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium text-white">CashBack Plan <span class="text-xs text-slate-400 block font-normal">Premium</span></td>
+                            <td class="p-4 text-emerald-400 font-bold">145% / Trade</td>
+                            <td class="p-4 text-slate-300">$500</td>
+                            <td class="p-4 text-slate-300">$30,000</td>
+                            <td class="p-4"><button class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Select Plan</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white">Client Testimonials</h2>
+                <p class="text-slate-400 mt-2">Hear from our satisfied clients who have achieved impressive results</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <p class="text-slate-300 text-sm italic">"Since I started using Traderwithmeglobal, I have been earning like never before. You guys have the best signals."</p>
+                    <div class="mt-6 pt-4 border-t border-slate-800">
+                        <strong class="text-white text-sm block">Malcom47</strong>
+                        <span class="text-xs text-slate-400">Verified Trader</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <p class="text-slate-300 text-sm italic">"I already got more than $200,000 within a month investing with Traderwithmeglobal. Will again invest soon."</p>
+                    <div class="mt-6 pt-4 border-t border-slate-800">
+                        <strong class="text-white text-sm block">Christy</strong>
+                        <span class="text-xs text-slate-400">Elite Investor</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <p class="text-slate-300 text-sm italic">"I was able to earn additional $30,000 to my profit. It's amazing, you guys are the best, keep it up."</p>
+                    <div class="mt-6 pt-4 border-t border-slate-800">
+                        <strong class="text-white text-sm block">Linday8</strong>
+                        <span class="text-xs text-slate-400">Professional Trader</span>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <p class="text-slate-300 text-sm italic">"This was a very easy process and I received my funds quickly as I needed them! Highly recommend Traderwithmeglobal."</p>
+                    <div class="mt-6 pt-4 border-t border-slate-800">
+                        <strong class="text-white text-sm block">Crian</strong>
+                        <span class="text-xs text-slate-400">Active Trader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-slate-800 pb-8">
+                <span class="text-lg font-bold text-white uppercase tracking-wider">Traderwithmeglobal</span>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">About Us</a>
+                    <a href="#" class="hover:text-white transition">Why Choose Us</a>
+                    <a href="#" class="hover:text-white transition">Education</a>
+                    <a href="#" class="hover:text-white transition">
