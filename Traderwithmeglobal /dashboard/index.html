@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | TradeWithMe Global</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-white min-h-screen">
+
+  <header class="border-b border-slate-800 p-5 flex justify-between items-center">
+    <h1 class="text-xl font-bold">TradeWithMe Global</h1>
+    <button id="logoutBtn"
+      class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg">
+      Logout
+    </button>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <section class="mb-8">
+      <p class="text-slate-400">Customer dashboard</p>
+      <h2 class="text-3xl font-bold mt-2">
+        Welcome, <span id="customerName">Customer</span>
+      </h2>
+      <p id="customerEmail" class="text-slate-400 mt-2"></p>
+      <p id="accountStatus" class="mt-3 text-sm"></p>
+    </section>
+
+    <section class="grid gap-5 md:grid-cols-3">
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <p class="text-slate-400">Account balance</p>
+        <h3 class="text-2xl font-bold mt-3">$0.00</h3>
+        <p class="text-xs text-slate-500 mt-2">Not connected to account ledger</p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <p class="text-slate-400">Total deposits</p>
+        <h3 class="text-2xl font-bold mt-3">$0.00</h3>
+        <p class="text-xs text-slate-500 mt-2">No deposit records loaded</p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <p class="text-slate-400">Total withdrawals</p>
+        <h3 class="text-2xl font-bold mt-3">$0.00</h3>
+        <p class="text-xs text-slate-500 mt-2">No withdrawal records loaded</p>
+      </div>
+    </section>
+
+    <section class="mt-8 bg-slate-900 border border-slate-800 rounded-xl p-6">
+      <h3 class="text-xl font-semibold">Account overview</h3>
+      <p class="text-slate-400 mt-3">
+        Your account information will appear here. Transaction and trading
+        records will be displayed when the secure database features are connected.
+      </p>
+    </section>
+
+    <p id="message" class="text-sm text-slate-400 mt-6"></p>
+  </main>
+
+  <script>
+    async function loadCustomer() {
+      const message = document.getElementById("message");
+
+      try {
+        const response = await fetch("/api/auth/me", {
+          method: "GET",
+          credentials: "same-origin",
+          cache: "no-store"
+        });
+
+        if (response.status === 401) {
+          window.location.href = "/login/";
+          return;
+        }
+
+        if (!response.ok) {
+          message.textContent = "Unable to verify your account. Please try again later.";
+          return;
+        }
+
+        const data = await response.json();
+
+        document.getElementById("customerName").textContent =
+          data.user.fullName;
+
+        document.getElementById("customerEmail").textContent =
+          data.user.email;
+
+        document.getElementById("accountStatus").textContent =
+          "Account status: " + data.user.status;
+      } catch (error) {
+        message.textContent = "Connection error. Please refresh the page.";
+      }
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", async () => {
+      const button = document.getElementById("logoutBtn");
+      button.disabled = true;
+      button.textContent = "Signing out...";
+
+      try {
+        const response = await fetch("/api/auth/logout", {
+          method: "POST",
+          credentials: "same-origin"
+        });
+
+        if (response.ok) {
+          window.location.href = "/login/";
+        } else {
+          button.disabled = false;
+          button.textContent = "Logout";
+          alert("Unable to sign out. Please try again.");
+        }
+      } catch (error) {
+        button.disabled = false;
+        button.textContent = "Logout";
+        alert("Connection error. Please try again.");
+      }
+    });
+
+    loadCustomer();
+  </script>
+
+</body>
+</html>
