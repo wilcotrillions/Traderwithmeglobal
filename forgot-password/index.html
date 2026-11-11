@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#061225">
+<title>Forgot password | TradeWithMe Global</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#061225;color:#f8fafc}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 85% 10%,#12386a 0,transparent 32%),#061225;display:grid;place-items:center;padding:24px}
+a{color:#8bbcff;text-decoration:none}a:hover{text-decoration:underline}
+.card{width:min(100%,460px);background:#0b1a2e;border:1px solid #263a55;border-radius:20px;padding:32px;box-shadow:0 24px 80px #0006}
+.brand{font-weight:900;letter-spacing:-.04em;font-size:19px;color:white}.brand span{color:#60a5fa}
+.eyebrow{margin:28px 0 8px;color:#60a5fa;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h1{font-size:28px;margin:0 0 8px}.sub{color:#a6b4c8;font-size:14px;line-height:1.6;margin:0 0 24px}
+label{display:block;color:#d7e0ed;font-size:13px;font-weight:650;margin:16px 0 7px}
+input{width:100%;border:1px solid #344862;border-radius:10px;background:#071426;color:white;padding:13px 14px;font:inherit;outline:none}
+input:focus{border-color:#60a5fa;box-shadow:0 0 0 3px #3b82f633}
+button{width:100%;margin-top:22px;border:0;border-radius:10px;padding:14px;background:#2563eb;color:white;font-size:14px;font-weight:800;cursor:pointer}
+button:hover{background:#3b82f6}button:disabled{opacity:.6;cursor:wait}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:14px;font-size:13px;color:#a6b4c8}
+.check{display:flex;gap:9px;align-items:flex-start;font-size:12px;line-height:1.5;color:#b8c5d7;margin-top:18px}.check input{width:auto;margin-top:2px}
+.message{display:none;margin-top:16px;border-radius:10px;padding:12px;font-size:13px;line-height:1.5}
+.message.error{display:block;background:#7f1d1d33;border:1px solid #ef444455;color:#fecaca}
+.message.success{display:block;background:#14532d33;border:1px solid #22c55e55;color:#bbf7d0}
+.foot{border-top:1px solid #263a55;margin-top:24px;padding-top:18px;color:#8798af;font-size:12px;line-height:1.6}
+@media(max-width:480px){body{padding:14px}.card{padding:24px}h1{font-size:25px}}
+</style></head><body><main class="card">
+<a class="brand" href="/">TRADE<span>WITHME</span>GLOBAL</a>
+
+<p class="eyebrow">Account recovery</p><h1>Reset your password</h1>
+<p class="sub">Enter the email address associated with your account. If eligible, we'll send a secure reset link.</p>
+<form id="forgotForm"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" required maxlength="254">
+<button id="submit" type="submit">Send reset link</button><div id="message" class="message" role="status" aria-live="polite"></div></form>
+<div class="foot"><a href="/login/">Back to login</a></div>
+<script>
+const f=document.getElementById("forgotForm"),b=document.getElementById("submit"),m=document.getElementById("message");
+f.addEventListener("submit",async e=>{e.preventDefault();b.disabled=true;b.textContent="Sending…";m.className="message";
+try{const r=await fetch("/api/auth/forgot-password",{method:"POST",credentials:"same-origin",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:f.email.value})});const d=await r.json();if(!r.ok)throw new Error(d.error||"Unable to send reset link.");m.textContent=d.message;m.className="message success";}
+catch(err){m.textContent=err.message;m.className="message error";}finally{b.disabled=false;b.textContent="Send reset link";}});
+</script>
+</main></body></html>
